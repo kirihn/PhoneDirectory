@@ -1,0 +1,49 @@
+.Div-Container {
+  border: 1px solid black;
+  margin: 20px 0 20px 0;
+  padding: 20px;
+  border-radius: 5px;
+}
+.Div-Container .Form-Container {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.Div-Container .Form-Container :first-child {
+  margin-right: 20px;
+}
+.Div-Container .Form-Container input {
+  width: 510px;
+  min-width: 100px;
+  height: 50px;
+  background: none;
+  font-size: 23px;
+  text-align: center;
+  border-radius: 5px;
+}
+.Div-Container .Form-Container input:focus::-moz-placeholder {
+  color: transparent;
+}
+.Div-Container .Form-Container input:focus::placeholder {
+  color: transparent;
+}
+.Div-Container .Button-Container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.Div-Container .Button-Container :first-child {
+  margin-right: 20px;
+}
+.Div-Container .Button-Container button {
+  width: 510px;
+  min-width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  background: none;
+  font-size: 23px;
+  text-align: center;
+}
+.Div-Container .Button-Container button:hover {
+  background: #c6c6c6;
+}/*# sourceMappingURL=AddFormStyle.css.map */

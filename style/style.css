@@ -1,3 +1,45 @@
-h1 {
-  margin-top: 300px;
+body {
+  background: #ededed;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+body .MainContainer {
+  margin: auto;
+  margin-top: 50px;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 5px;
+  min-width: 300px;
+  max-width: 1100px;
+  min-height: 500px;
+  max-height: 800px;
+}
+body .MainContainer .PhoneDirContainer {
+  border: 1px solid black;
+  border-radius: 5px 0 0 5px;
+  padding: 30px;
+  min-height: 300px;
+  max-height: 500px;
+  overflow: auto;
+  scroll-padding: 10px;
+}
+body .MainContainer .PhoneDirContainer .PhoneItem:hover {
+  padding: 30px 20px 30px 20px;
+  background: #c6c6c6;
+}
+body .MainContainer .PhoneDirContainer .PhoneItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 15px;
+  width: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: 600;
+  color: black;
+  text-decoration: none;
+}
+body .MainContainer .PhoneDirContainer .PhoneItem span {
+  margin: 0 30px 0 30px;
 }/*# sourceMappingURL=style.css.map */

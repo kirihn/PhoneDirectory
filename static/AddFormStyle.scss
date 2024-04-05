@@ -1,0 +1,54 @@
+
+.Div-Container{
+    border: 1px solid black;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+
+    .Form-Container{
+        display: flex;
+        justify-content: space-between;
+    border-radius: 5px;
+
+    
+        :first-child{
+            margin-right: 20px;
+        }
+        input{
+            width: 510px;
+            min-width: 100px;
+            height: 50px;
+            background: none;
+            font-size: 23px;
+            text-align: center;
+            border-radius: 5px;
+
+        }
+        input:focus::placeholder{
+            color: transparent;
+        }
+    }
+    
+    .Button-Container{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    
+        :first-child{
+            margin-right: 20px;
+        }
+        button{
+            width: 510px;
+            min-width: 100px;
+            height: 50px;
+            border-radius: 5px;
+            background: none;
+            font-size: 23px;
+            text-align: center;
+            
+        }
+        button:hover{
+            background: #c6c6c6;
+        }
+    }
+}

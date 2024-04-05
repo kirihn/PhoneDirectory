@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="/style/AddFormStyle.css">
+<div class="Div-Container">
+    <form action="" class="Form-Container">
+        <input type="text" name="" id="InpName" placeholder="Введите ваше имя">
+        <input type="text" name="" id="InpPhone" placeholder="Введите ваш телефон">
+    </form>
+    <div class="Button-Container">
+        <button onclick="AddItem()">Добавить</button>
+        <button onclick="">Назад</button>
+    </div>
+</div>
+<script src="/scripts/AddScript.js"></script>
+
+<script>
+
+    const NameEl = document.getElementById('InpName');
+    const PhoneEl = document.getElementById('InpPhone');
+
+    let Item: {}
+
+    function AddItem(){
+        let Name = NameEl.value.trim();
+        let Phone = PhoneEl.value.trim();
+        
+        if(Name === '' || Phone === ''){
+            alert("Пожалуйста, заполните все поля");
+            return;
+        }
+        if(!(/^\d{12}$/.test(Phone))){
+            alert('Некорректный номер телефона\nТелефон должен содержать только цифры и состоять из 12 символов');
+            return;
+        }
+
+        Item.Name = Name;
+        Item.Phone = Phone;
+
+        alert(1)
+
+        fetch('http://localhost:3000/Add', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' // Указываем тип контента как JSON
+            },
+            body: JSON.stringify(Item)
+        })
+        .then(response => {
+            alert(response);
+        })
+        .then(data => {
+            alert(data); // Выводим текст ответа
+        })
+        .catch( Error => {
+            console.log("any error   " + Error)
+        })
+    }
+
+</script>
