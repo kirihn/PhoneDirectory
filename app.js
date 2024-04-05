@@ -5,7 +5,8 @@ const app = express();
 
 const hbs = exphbs.create({
     defaultLayout: 'Main',
-    extname: 'hbs'
+    extname: 'hbs',
+    partialsDir: './views/partials'
 });
 
 app.engine('hbs', hbs.engine);
@@ -15,29 +16,18 @@ app.set('views', 'views'); // default views
 
 app.use(express.static('style'));
 
+
 const persons = [
-    { name: "Nils", age: 20 },
-    { name: "Teddy", age: 10 },
-    { name: "Nelson", age: 40 },
+    { name: "Nils", phone: 20 },
+    { name: "Teddy", phone: 10 },
+    { name: "Nelson", phone: 40 },
   ]
-  
-  Handlebars.registerPartial(
-    "person", 
-    "<h1>{{person.name}} is {{person.age}} years old.<h1/>\n"
-)
-
-
-
-
-
-
-
 
 
 
 
 app.get('/', (req, res) => {
-    res.render('GetForm');
+    res.render('GetForm', {persons});
 });
 
 app.get('/Add', (req, res) => {
