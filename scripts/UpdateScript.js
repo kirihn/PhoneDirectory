@@ -34,10 +34,10 @@ function Update(){
 
         alert(JSON.stringify(UpdateItem));
 
-        fetch('http://localhost:3000/Update', {
+        fetch('/Update', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json' // Указываем тип контента как JSON
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(UpdateItem)
         })
@@ -51,7 +51,6 @@ function Update(){
             return response.text();
         })
         .then(data => {
-            //alert(data.message); // Выводим текст ответа
             document.body.innerHTML = data;
         })
         .catch( Error => {
@@ -71,10 +70,10 @@ function del(){
 
     alert(JSON.stringify(DelItem));
 
-    fetch('http://localhost:3000/Delete', {
+    fetch('/Delete', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json' // Указываем тип контента как JSON
+            'Content-Type': 'application/json'
         },
         body: JSON.stringify(DelItem)
     })
@@ -88,7 +87,7 @@ function del(){
         return response.text();
     })
     .then(data => {
-        //alert(data.message); // Выводим текст ответа
+
         document.body.innerHTML = data;
     })
     .catch( Error => {

@@ -12,7 +12,7 @@ const NameEl = document.getElementById('InpName');
 
         alert(JSON.stringify(Item));
 
-        fetch('http://localhost:3000/Add', {
+        fetch('/Add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json' // Указываем тип контента как JSON
