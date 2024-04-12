@@ -1,18 +1,19 @@
+
 body{
     background: #ededed;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
     .MainContainer{
         margin: auto;
-        margin-top: 50px;
-        padding: 30px;
+        margin-top: 10px;
+        padding: 20px;
         box-sizing:border-box;
         border: 2px solid black;
         border-radius: 5px;
         min-width: 300px;
         max-width: 1100px;
         min-height: 500px;
-        max-height: 800px;
+        max-height: 710px;
 
         
         .PhoneDirContainer{
@@ -21,7 +22,7 @@ body{
             border-radius: 5px 0 0 5px;
             padding: 30px;
             min-height: 300px;
-            max-height: 500px;
+            max-height: 400px;
             overflow: auto;
             scroll-padding: 10px;
 

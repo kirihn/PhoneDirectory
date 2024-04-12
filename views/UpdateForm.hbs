@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="http://localhost:3000/style/UpdateFormStyle.css">
+
+{{#if foundPerson}}
+
+<p>Найден пользователь с именем <span id="pName">{{foundPerson.Name}}</span> и телефоном <span id="pPhone">{{foundPerson.Phone}}</span></p>
+
+<div class="Div-Container">
+    <form action="" class="Form-Container">
+        <input type="text" name="" id="InpName" placeholder="Введите ваше имя" value="{{foundPerson.Name}}">
+        <input type="text" name="" id="InpPhone" placeholder="Введите ваш телефон" value="{{foundPerson.Phone}}">
+    </form>
+    <div class="Button-Container">
+        <button onclick="Update()">Изменить</button>
+        <button onclick="del()" id="DelButton">Удалить</button>
+        <button onclick="Back()">Назад</button>
+    </div>
+</div>
+
+{{else}}
+    <p>Персона не найдена</p>
+{{/if}}
+<script src="http://localhost:3000/scripts/UpdateScript.js"></script>

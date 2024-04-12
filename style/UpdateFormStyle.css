@@ -36,6 +36,9 @@
 .Div-Container .Button-Container :first-child {
   margin-right: 20px;
 }
+.Div-Container .Button-Container :last-child {
+  margin-left: 20px;
+}
 .Div-Container .Button-Container button {
   width: 510px;
   min-width: 100px;
@@ -55,4 +58,4 @@ a {
 }
 a span {
   color: rgb(98, 98, 98); /* Изменяет цвет текста */
-}/*# sourceMappingURL=AddFormStyle.css.map */
+}/*# sourceMappingURL=UpdateFormStyle.css.map */
