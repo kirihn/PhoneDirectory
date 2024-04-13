@@ -2,13 +2,14 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const fs = require('fs');
+const Handlebars = require('handlebars');
 
 const app = express();
 
 const hbs = exphbs.create({
     defaultLayout: 'Main',
     extname: 'hbs',
-    partialsDir: './views/partials'
+    partialsDir: './views/partials',
 });
 
 app.engine('hbs', hbs.engine);
@@ -18,6 +19,11 @@ app.set('views', 'views'); // default views
 
 app.use('/style', express.static('style'));
 app.use('/scripts', express.static('scripts'));
+
+Handlebars.registerHelper('BackButton', function () {
+    return new Handlebars.SafeString('<button onclick="Back()">Назад</button>')
+})
+
 app.use(bodyParser.json())
 
 let persons = [ ]

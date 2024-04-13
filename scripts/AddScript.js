@@ -39,3 +39,4 @@ const NameEl = document.getElementById('InpName');
     function Back(){
         window.location.assign(`/`);
     }
+    
