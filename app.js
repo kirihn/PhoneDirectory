@@ -151,6 +151,7 @@ app.post('/Delete', (req, res) => {
         if(element.Name == Item.Name && element.Phone == Item.Phone){
             console.log(10)
             persons.splice(index, 1);
+            Item.Name = ".";
         }
     });
 
